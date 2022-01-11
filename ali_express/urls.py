@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from apps import users,categories
+from apps import users,categories,trash
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register',include('rest_framework.urls')),

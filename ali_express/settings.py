@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'apps.users',
     'apps.posts',
     'apps.categories',
+    'apps.trash',
 
     'rest_framework_simplejwt',
     'rest_framework',
@@ -132,6 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.User'
 AUTH_CATEGORY_MODEL = 'categories.Category'
+AUTH_TRASH_MODEL = 'trash.Trash'
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),

@@ -1,5 +1,4 @@
 from rest_framework import serializers
-from apps.categories.models import Category
 from apps.posts.models import Post,PostImage
 
 class PostSerializer(serializers.ModelSerializer):
@@ -10,6 +9,7 @@ class PostSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class PostImageSerializer(serializers.ModelSerializer):
+    user = serializers.CharField(read_only = True)
 
     class Meta:
         model = PostImage
